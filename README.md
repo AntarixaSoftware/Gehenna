@@ -7,4 +7,4 @@ anggota:
 - yoshh
 - bastt
 - r-reev
-- Zahran ganteng
+- Zahran 
