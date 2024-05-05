@@ -1,0 +1,29 @@
+{ "frames": {
+   "WORLDv3.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 800, "h": 600 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 800, "h": 600 },
+    "sourceSize": { "w": 800, "h": 600 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "WORLDv3.png",
+  "format": "RGBA8888",
+  "size": { "w": 800, "h": 600 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "SKY", "opacity": 255, "blendMode": "normal" },
+   { "name": "MOUNTAIN", "opacity": 255, "blendMode": "normal" },
+   { "name": "CASTLE", "opacity": 255, "blendMode": "normal" },
+   { "name": "LAND", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}
