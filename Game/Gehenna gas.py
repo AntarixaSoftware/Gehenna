@@ -10,20 +10,10 @@ import pygame.mixer
 pygame.init()
 pygame.mixer.init()
 
-def change_background_music(level):
-    pygame.mixer.music.stop()  # Stop current music
-    if level == 0:
-        pygame.mixer.music.load('Game/ingame.mp3')
-    elif level == 1:
-        pygame.mixer.music.load('Game/lvl1.mp3')
-    elif level == 2:
-        pygame.mixer.music.load('Game/lvl2.mp3')
-    pygame.mixer.music.play(-1)  # Play the new music in loop
-
 current_track = "intro"
 pygame.mixer.music.load('Game/intro_3.mp3')
 pygame.mixer.music.play()
-pygame.mixer.music.set_volume(1.0)  # Pastikan volume terdengar
+pygame.mixer.music.set_volume(0.2)  # Pastikan volume terdengar
 
 music_end_event = pygame.USEREVENT + 1
 pygame.mixer.music.set_endevent(music_end_event)
@@ -38,7 +28,7 @@ SCROLL_THRESH = 200
 ROWS = 16
 COLS = 150
 TILE_SIZE = SCREEN_HEIGHT // ROWS
-TILE_TYPES = 12
+TILE_TYPES = 18
 RETURN_BUTTON = pygame.USEREVENT + 1
 screen_scroll = 0
 bg_scroll = 0
@@ -61,46 +51,44 @@ ending_printed_text = ""
 ending_story_texts_displayed = []
 
 story_texts = [
-    "Pada suatu hari hiduplah seorang pemuda yang sangat tampan.",
-    "pemuda tersebut bernama Zahran.",
-    "Setiap hari, dia dicari oleh gadis gadis cantik di seluruh desa."
+    "A knight, who's swore to be the best Knight",
+    "Is now on his mission to accomplish his ambition",
+    "The road ahead is unkwown",
+    "Only him and him only can go down this road"
 ]
 
 ending_story_texts = [
-    "Akhirnya, Zahran berhasil mengalahkan semua musuhnya.",
-    "Dia kembali ke desanya sebagai pahlawan.",
-    "Desanya kembali damai dan Zahran hidup bahagia selamanya."
+    "The journey may not be the one",
+    "The start might not be the same",
+    "The end has to be this way",
+    "He accomplish what he swore",
+    "But at what cost"
 ]
 
 credits_text = [
-    "Credits",
-    "",
-    "Game Developer:",
-    "Nama Developer 1",
-    "Nama Developer 2",
-    "",
-    "Art & Design:",
-    "Nama Designer 1",
-    "Nama Designer 2",
-    "",
-    "Music & Sound:",
-    "Nama Musician 1",
-    "Nama Musician 2",
-    "",
-    "Special Thanks:",
-    "Nama Orang 1",
-    "Nama Orang 2",
-    "",
-    "Thank you for playing!"
+    "ANTARIXA",
+    " ",
+    "Project Lead",
+    "Yohannes Christian Panjaitan",
+    " ",
+    "Programmer",
+    "Muhammad Zahran Albara",
+    "Roy Sebastian Surbakti",
+    "Muhammad Sabda Arif",
+    " ",
+    "2D Art Designer ",
+    "Yohannes Christian Panjaitan",
+    "Yossi Afridho",
+    "Dimas Dharma Wicaksono",
+    " ",
+    "GEHENNA"
 ]
 
 credits_scroll = 0
 
-story_texts = [
-    "Pada suatu hari hiduplah seorang pemuda yang sangat tampan.",
-    "pemuda tersebut bernama Zahran.",
-    "Setiap hari, dia dicari oleh gadis gadis cantik di seluruh desa."
-]
+attack_sound = pygame.mixer.Sound('Game/Sound Assets/Sound Assets/mixkit-sword-cutting-flesh-2788.wav')
+jump_sound = pygame.mixer.Sound('Game/Sound Assets/Sound Assets/mixkit-quick-jump-arcade-game-239.wav')
+death_sound = pygame.mixer.Sound('Game/Sound Assets/Sound Assets/mixkit-ominous-drums-227.wav')
 
 moving_left = False
 moving_right = False
@@ -134,6 +122,16 @@ for x in range(TILE_TYPES):
     img = pygame.image.load(f'Game/img/tile/{x}.png')
     img = pygame.transform.scale(img, (TILE_SIZE, TILE_SIZE))
     img_list.append(img)
+
+def change_background_music(level):
+    pygame.mixer.music.stop()  # Stop current music
+    if level == 0:
+        pygame.mixer.music.load('Game/ingame.mp3')
+    elif level == 1:
+        pygame.mixer.music.load('Game/lvl1.mp3')
+    elif level == 2:
+        pygame.mixer.music.load('Game/lvl2.mp3')
+    pygame.mixer.music.play(-1)  # Play the new music in loop
 
 def draw_bg():
     screen.fill(BG)
@@ -182,7 +180,6 @@ class Player(pygame.sprite.Sprite):
             num_of_frames = len(os.listdir(f'Game/assets/{char_type}/{animation}'))
             for i in range(num_of_frames):
                 img = pygame.image.load(f'Game/assets/{char_type}/{animation}/{i}.png').convert_alpha()
-                img = pygame.transform.scale(img, (50, 100))
                 temp_list.append(img)
             self.animation_list.append(temp_list)
 
@@ -201,6 +198,8 @@ class Player(pygame.sprite.Sprite):
                 self.alive = False
 
         if self.attacked and self.index == len(self.animation_list[self.action]) - 1:
+            attack_sound.stop()  # Menghentikan suara lompat sebelum memainkan yang baru
+            attack_sound.play()
             self.attacked = False
             self.update_action(0)
 
@@ -304,6 +303,8 @@ class Player(pygame.sprite.Sprite):
             self.alive = False
             if not self.death_played:
                 self.update_action(3)
+                death_sound.stop()
+                death_sound.play()
                 
 
     def draw(self):
@@ -323,9 +324,9 @@ class World():
                     img_rect.x = x * TILE_SIZE
                     img_rect.y = y * TILE_SIZE
                     tile_data = (img, img_rect)
-                    if tile >= 0 and tile <=3:
+                    if tile >= 0 and tile <=3 or tile >= 15 and tile <= 16:
                         self.obstacle_list.append(tile_data) 
-                    elif tile >= 4 and tile <= 5:
+                    elif tile >= 4 and tile <= 5 or tile >= 12 and tile <= 14 or tile == 17 :
                         decoration = Decoration(img, x * TILE_SIZE, y * TILE_SIZE)
                         decorations.add(decoration)
                     elif tile == 6:
@@ -393,7 +394,7 @@ class Enemy(pygame.sprite.Sprite):
             if abs(self.move_counter) >= self.move_range:
                 self.direction *= -1
                 self.move_counter *= -1
-                self.flip = not self.flip
+                self.flip = True
                 self.idle = True
                 self.idle_timer = pygame.time.get_ticks()
         else:
@@ -620,9 +621,19 @@ def draw_ending_textbox():
         screen.blit(text_surface, (60, SCREEN_HEIGHT - 130 - (i+1)*30))
 
 def draw_credits():
-    global credits_scroll, run, start_game, level
+    global credits_scroll, run
+
+    # Event handling untuk mengontrol percepatan scroll menggunakan spasi atau klik mouse
+    keys = pygame.key.get_pressed()
+    mouse_buttons = pygame.mouse.get_pressed()
+
+    if keys[pygame.K_SPACE] or mouse_buttons[0]:  # Tombol spasi atau klik kiri mouse ditekan
+        credits_scroll -= 5  # Meningkatkan percepatan scroll
+    else:
+        credits_scroll -= 1  # Scroll normal
+
     screen.fill(BLACK)
-    
+
     font = pygame.font.SysFont('Arial', 30)
     y = SCREEN_HEIGHT + credits_scroll
     for line in credits_text:
@@ -631,10 +642,9 @@ def draw_credits():
         screen.blit(text_surface, text_rect)
         y += 40
 
-    credits_scroll -= 1
-
-    if y < -100: # Add this condition to close the game after credits finish
-        start_game = False
+    # Menutup game setelah kredit selesai
+    if y < -100:
+        run = False
 
 def play_next_track(current_track):
     if current_track == "intro":
@@ -731,6 +741,7 @@ while run:
                         show_ending_story = True
 
             else:
+               
                 screen_scroll = 0
                 if restart_button.draw(screen):
                     bg_scroll = 0
@@ -761,8 +772,11 @@ while run:
                 run = False
             if event.key == pygame.K_w and player.alive:
                 player.jump = True
+                jump_sound.stop()  # Menghentikan suara lompat sebelum memainkan yang baru
+                jump_sound.play()
             if event.key == pygame.K_SPACE:
                 player.attacked = True
+
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_a:
