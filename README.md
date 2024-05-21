@@ -15,7 +15,6 @@ Gehenna merupakan sebuah game Platformer RPG Pixel dengan mekanik utama bertarun
 - Player harus berhati - hati karena karakter akan mati jika healthbar mencapai 0
 - Player bisa bergerak, melompat dan menyerang musuh
 
-
 # Main Menu
 ![WhatsApp Image 2024-05-21 at 08 36 52](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/cbed0fdb-87c8-434e-8b7f-ae8994746240)
 
@@ -24,11 +23,17 @@ Main menu di dalam game ini memiliki 2 menu utama yaitu start dan juga exit
 # World Level 1
 ![WhatsApp Image 2024-05-21 at 08 37 44](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/91b47cf7-95e7-4661-ac29-bc5a51bd7d01)
 
+World level 1 memiliki 1 jenis enemy dan player bisa menjelajahi level 1 hingga mencapai checkpoint untuk lanjut ke level selanjutnya
+
 # World Level 2
 ![WhatsApp Image 2024-05-21 at 08 38 51](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/3d77f7bd-58bf-4eca-8489-b9b68ab7c5aa)
 
+World level 2 memiliki 1 jenis enemy dan player bisa menjelajahi level 2 hingga mencapai checkpoint untuk lanjut ke level selanjutnya
 
 # World Level 3
+![WhatsApp Image 2024-05-21 at 08 39 49](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/201cb10d-ae8c-4c18-b6cf-1f6ee24e179e)
+
+World level 3 memiliki 3 jenis enemy dan player bisa menjelajahi level ini sampai akhir, di saat mencapai akhir maka player akan mencapai akhir cerita 
 
 # UML Diagram
 ![Konsep Game PBO - UML NEW](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/2d4c9870-24dc-471a-b6f0-9f140959ab16)
