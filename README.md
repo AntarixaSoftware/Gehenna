@@ -6,6 +6,7 @@ Sebuah game pixel 2D platformer dengan storyline pendek yang dibuat untuk menjad
 
 Dalam pembuatannya "Gehenna" menggunakan Library pygame sebagai library utama yang digunakan dari awal sampai saat ini.
 
+# How To Play
 How To Play "Gehenna", Cara Bermain
 Gehenna merupakan sebuah game Platformer RPG Pixel dengan mekanik utama bertarung.
 - Player bisa melewati 3 level yang ada di dalam game
@@ -13,6 +14,7 @@ Gehenna merupakan sebuah game Platformer RPG Pixel dengan mekanik utama bertarun
 - Player harus berhati - hati karena karakter akan mati jika healthbar mencapai 0
 - Player bisa bergerak, melompat dan menyerang musuh
 
+# Contributors
 Anggota Tim ANTARIXA :
 - Yohanes Christian Panjaitan (122140217)
 - Dhimas Darma Wicaksono (122140215)
