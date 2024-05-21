@@ -17,6 +17,7 @@ Gehenna merupakan sebuah game Platformer RPG Pixel dengan mekanik utama bertarun
 
 
 # Main Menu
+![WhatsApp Image 2024-05-21 at 08 36 52](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/cbed0fdb-87c8-434e-8b7f-ae8994746240)
 Main menu di dalam game ini memiliki 2 menu utama yaitu start dan juga exit
 
 # World Level 1
