@@ -25,6 +25,8 @@ Main menu di dalam game ini memiliki 2 menu utama yaitu start dan juga exit
 ![WhatsApp Image 2024-05-21 at 08 37 44](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/91b47cf7-95e7-4661-ac29-bc5a51bd7d01)
 
 # World Level 2
+![WhatsApp Image 2024-05-21 at 08 38 51](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/3d77f7bd-58bf-4eca-8489-b9b68ab7c5aa)
+
 
 # World Level 3
 
