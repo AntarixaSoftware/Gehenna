@@ -14,6 +14,9 @@ Gehenna merupakan sebuah game Platformer RPG Pixel dengan mekanik utama bertarun
 - Player harus berhati - hati karena karakter akan mati jika healthbar mencapai 0
 - Player bisa bergerak, melompat dan menyerang musuh
 
+# UML Diagram
+![Konsep Game PBO - UML NEW](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/2d4c9870-24dc-471a-b6f0-9f140959ab16)
+
 # Contributors
 Anggota Tim ANTARIXA :
 - Yohanes Christian Panjaitan (122140217)
