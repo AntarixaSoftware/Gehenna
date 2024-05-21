@@ -39,7 +39,9 @@ World level 3 memiliki 3 jenis enemy dan player bisa menjelajahi level ini sampa
 
 
 # UML Diagram
-![Konsep Game PBO - UML NEW](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/2d4c9870-24dc-471a-b6f0-9f140959ab16)
+![Konsep Game PBO - UML NEW (1)](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/2c0d017a-5d64-4f90-bc0c-9ad07b02250c)
+
+
 
 # Contributors
 Anggota Tim ANTARIXA :
