@@ -33,7 +33,10 @@ World level 2 memiliki 1 jenis enemy dan player bisa menjelajahi level 2 hingga 
 # World Level 3
 ![WhatsApp Image 2024-05-21 at 08 39 49](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/201cb10d-ae8c-4c18-b6cf-1f6ee24e179e)
 
-World level 3 memiliki 3 jenis enemy dan player bisa menjelajahi level ini sampai akhir, di saat mencapai akhir maka player akan mencapai akhir cerita 
+World level 3 memiliki 3 jenis enemy dan player bisa menjelajahi level ini sampai akhir, di saat mencapai akhir maka player akan mencapai akhir cerita dan mendapatkan ending
+
+![WhatsApp Image 2024-05-21 at 08 40 58](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/b13da022-deb4-4cb2-87bb-fb48407dcf3f)
+
 
 # UML Diagram
 ![Konsep Game PBO - UML NEW](https://github.com/AntarixaSoftware/Gehenna/assets/168000783/2d4c9870-24dc-471a-b6f0-9f140959ab16)
