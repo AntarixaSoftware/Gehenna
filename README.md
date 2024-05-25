@@ -47,7 +47,7 @@ World level 3 memiliki 3 jenis enemy dan player bisa menjelajahi level ini sampa
 Anggota Tim ANTARIXA :
 - Yohanes Christian Panjaitan (122140217)
 - Dhimas Darma Wicaksono (122140215)
-- Yossi Afridho (122140208)
+- Yossi Afridho (122140211)
 - Roy Sebastian Surbakti (122140216)
 - Muhammad Sabda Arif (122140218)
 - Muhammad Zahran Albara (122140240)
